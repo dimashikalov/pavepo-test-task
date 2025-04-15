@@ -5,6 +5,7 @@ import { useLocalSearchParams } from 'expo-router';
 import { useAtomValue } from 'jotai';
 import { userAtom } from '@/entities/users/model/user.state';
 import { IUser } from '@/entities/users/model/user.model';
+import { MyBackButton } from '@/shared/MyBackButton/MyBackButton';
 
 export default function User() {
   const { id } = useLocalSearchParams();
@@ -23,7 +24,7 @@ export default function User() {
   }, []);
 
   if (!user) {
-    return <ActivityIndicator size="large" color="#0000ff" />;
+    return <ActivityIndicator size="large" color={Colors.primaryHover} />;
   }
 
   return (
@@ -51,6 +52,8 @@ export default function User() {
         <Text style={styles.text}>Catchphrase: {user.company.catchPhrase}</Text>
         <Text style={styles.text}>BS: {user.company.bs}</Text>
       </View>
+
+      <MyBackButton />
     </View>
   );
 }

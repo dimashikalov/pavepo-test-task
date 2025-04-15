@@ -6,7 +6,7 @@ import {
   TextInput,
   View,
 } from 'react-native';
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Colors, Fonts, Gaps } from '@/shared/tokens';
 import { CustomLink } from '@/shared/Link/CustomLink';
 import { useAtomValue, useSetAtom } from 'jotai';

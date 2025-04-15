@@ -19,7 +19,7 @@ export default function RootLayout() {
             headerShown: false,
             statusBarBackgroundColor: Colors.black,
             contentStyle: {
-              backgroundColor: Colors.black,
+              backgroundColor: Colors.blackLight,
               paddingTop: insets.top,
             },
           }}
@@ -34,5 +34,6 @@ export default function RootLayout() {
 const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
+    backgroundColor: Colors.black,
   },
 });

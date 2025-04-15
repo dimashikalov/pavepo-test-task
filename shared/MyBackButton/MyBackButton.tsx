@@ -2,8 +2,9 @@ import { useNavigation } from '@react-navigation/native';
 import { Dimensions, Pressable, StyleSheet, Text, View } from 'react-native';
 import { PressableProps } from 'react-native-gesture-handler';
 import { Colors, Fonts, Radius } from '../tokens';
+const { width } = Dimensions.get('window');
 
-export function MyBackButton({ ...props }: PressableProps) {
+export default function MyBackButton({ ...props }: PressableProps) {
   const navigation = useNavigation();
 
   return (
@@ -26,7 +27,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.blackLight,
     justifyContent: 'center',
     alignItems: 'center',
-    width: Dimensions.get('screen').width / 2,
+    padding: width * 0.03,
   },
 
   text: {

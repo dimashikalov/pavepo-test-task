@@ -5,7 +5,7 @@ import { useLocalSearchParams } from 'expo-router';
 import { useAtomValue } from 'jotai';
 import { userAtom } from '@/entities/users/model/user.state';
 import { IUser } from '@/entities/users/model/user.model';
-import { MyBackButton } from '@/shared/MyBackButton/MyBackButton';
+import MyBackButton from '@/shared/MyBackButton/MyBackButton';
 
 export default function User() {
   const { id } = useLocalSearchParams();

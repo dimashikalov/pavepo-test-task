@@ -30,11 +30,10 @@ export const loadUserAtom = atom(
       });
     } catch (error) {
       if (error instanceof AxiosError) {
-        console.log('err ', error);
         set(userAtom, {
           isLoading: false,
           users: [],
-          error: error.response?.data.message,
+          error: error.message,
         });
       }
     }

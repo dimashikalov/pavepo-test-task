@@ -1,8 +1,10 @@
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { Dimensions, Pressable, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import { IUser } from '../model/user.model';
 import { Colors, Fonts, Radius } from '@/shared/tokens';
 import { Link } from 'expo-router';
+
+const { width } = Dimensions.get('window');
 
 export default function UserCard(user: IUser) {
   return (
@@ -28,6 +30,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     borderRadius: Radius.r10,
     backgroundColor: Colors.blackLight,
+    padding: width * 0.05,
   },
   text: {
     color: Colors.white,

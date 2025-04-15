@@ -2,6 +2,8 @@ import { View, StyleSheet, Image, Text, Dimensions } from 'react-native';
 import { Colors, Fonts, Gaps } from '@/shared/tokens';
 import { CustomLink } from '@/shared/Link/CustomLink';
 
+const { width } = Dimensions.get('window');
+
 export default function NotFoundScreen() {
   return (
     <View style={styles.container}>
@@ -22,10 +24,11 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: Colors.black,
     justifyContent: 'center',
-    padding: 55,
+    padding: width * 0.05,
   },
   content: {
     alignItems: 'center',
+    width: '100%',
     gap: Gaps.g20,
   },
 
@@ -33,9 +36,5 @@ const styles = StyleSheet.create({
     fontSize: Fonts.f18,
     color: Colors.white,
     textAlign: 'center',
-  },
-  image: {
-    width: 204,
-    height: 282,
   },
 });
